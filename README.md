@@ -254,7 +254,6 @@ flowchart LR
   end
 
   featureB[feature/*] --> Development
-  taskB[task/refactor-*] --> Development
   experimentB[experiment/*] --> ExperimentalBase --> Development
   bugfixB[bugfix/*] --> BugfixBase --> Preview --> Release
   hotfixB[hotfix/*] --> HotfixBase --> Release
