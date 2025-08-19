@@ -1,0 +1,44 @@
+# .github/ISSUE_TEMPLATE/config.yml
+# Purpose: steer users into the right templates and keep vulnerability reports PRIVATE.
+# Note: The "Vulnerability Report" issue template below is ONLY for PRIVATE repositories.
+#       For PUBLIC repositories, reporters must use the Security Policy link (private intake).
+
+blank_issues_enabled: false
+
+contact_links:
+  # 🔒 PUBLIC REPOS → Private intake only (no public issues for security).
+  - name: "🔒 Security Report (Private)"
+    url: "https://github.com/<org>/<repo>/security/policy"
+    about: "PUBLIC repositories: report vulnerabilities privately via our security policy. Do NOT open a public issue."
+
+  # 🛡️ PRIVATE REPOS ONLY → Internal vulnerability issue template.
+  # If your template filename includes an emoji (🛡️-vulnerability-report.md), it must be URL-encoded.
+  # Remove this link in PUBLIC repos to avoid public disclosure by mistake.
+  - name: "🛡️ Vulnerability Report — internal template (PRIVATE repos only)"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%F0%9F%9B%A1%EF%B8%8F-vulnerability-report.md"
+    about: "PRIVATE repositories only: opens an internal issue for security triage. On PUBLIC repos, use the Security Report link above."
+
+  # 🧭 Direct links to public templates (emoji in filenames → URL-encoded).
+  - name: "🐛 Bug Report — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%F0%9F%90%9B-bug-report.md"
+    about: "Report a reproducible defect with steps and environment."
+
+  - name: "📝 Feedback Report — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%F0%9F%93%9D-feedback-report.md"
+    about: "Share usability feedback or suggestions to improve the product."
+
+  - name: "🚀 Performance Report — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%F0%9F%9A%80-performance-report.md"
+    about: "Report latency, memory, or CPU concerns with measurements."
+
+  - name: "📚 Documentation Report — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%F0%9F%93%9A-documentation-report.md"
+    about: "Flag gaps, inaccuracies, or unclear instructions in docs."
+
+  - name: "♿ Accessibility Report — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%E2%99%BF-accessibility-report.md"
+    about: "Report accessibility barriers (contrast, focus order, screen readers)."
+
+  - name: "✨ Feature Request — use the template"
+    url: "https://github.com/<org>/<repo>/issues/new?template=%E2%9C%A8-feature-request.md"
+    about: "Propose new functionality with problem, solution, and acceptance criteria."
