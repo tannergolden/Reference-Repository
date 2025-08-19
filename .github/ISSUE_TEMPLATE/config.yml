@@ -7,6 +7,6 @@ blank_issues_enabled: false
 
 contact_links:
   # 🔒 PUBLIC REPOS → Private intake only (no public issues for security).
-  - name: "🔒 SECURITY.md Report (Private)"
+  - name: "🔒 Security Report (Private)"
     url: "https://github.com/<org>/<repo>/security/policy"
     about: "PUBLIC repositories: report vulnerabilities privately via our security policy. Do NOT open a public issue."
