@@ -250,7 +250,6 @@ flowchart LR
     FeatureBase((Feature))
     BugfixBase((Bugfix))
     HotfixBase((Hotfix))
-    IntegrationBase((Integration))
     ExperimentalBase((Experimental))
   end
 
@@ -259,7 +258,7 @@ flowchart LR
   experimentB[experiment/*] --> ExperimentalBase --> Development
   bugfixB[bugfix/*] --> BugfixBase --> Preview --> Release
   hotfixB[hotfix/*] --> HotfixBase --> Release
-  Development --> IntegrationBase --> Preview --> Release
+  Development --> Preview --> Release
 ```
 
 ---
