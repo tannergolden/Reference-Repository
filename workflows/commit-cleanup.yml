@@ -1,6 +1,0 @@
-- name: Rewrite ONLY the commits in this push (range-limited)
-  shell: bash
-  run: |
-    set -euo pipefail
-    BEFORE="${{ github.event.before }}"
-    git rebase --rebase-merges --exec "./conventionalize-commits.sh" "$BEFORE"
