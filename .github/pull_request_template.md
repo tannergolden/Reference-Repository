@@ -108,12 +108,13 @@ _Include screenshots, recordings, traces, or logs (redact secrets)._
 
 ---
 
-## 🔍 Reviewer checklist
-- [ ] Scope is clear; PR size appropriate
-- [ ] Tests cover change paths; CI green
-- [ ] Security/perf/a11y reviewed if relevant
-- [ ] Docs/release note make sense
-- [ ] Title follows Conventional Commit; squashing will produce good history
+## 🔍 Reviewer guidance
+When reviewing this PR, confirm that:
+- The scope is clear and the PR size is appropriate.
+- Tests cover the change paths and CI is passing.
+- Security, performance, and accessibility impacts are reviewed if relevant.
+- Documentation and release notes are accurate and sufficient.
+- The title follows Conventional Commit standards, ensuring a clean squash history.
 
 <details>
 <summary>🧾 Proposed squash commit (optional)</summary>
