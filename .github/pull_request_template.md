@@ -1,132 +1,130 @@
 <!--
-Thanks for your contribution! Please fill out the sections below so we can review quickly and safely.
-Keep changes small and focused; link to tickets/docs; include tests and evidence.
+PR Template — Fill out EVERY section as fully as possible.
+Do not delete sections. If something is not applicable, write N/A.
+Keep PRs small; link ticket/ADR; include tests and evidence.
+Title: use Conventional Commit. No secrets in code/logs/screenshots.
 -->
 
-> [!IMPORTANT]
-> **Target branch = `Development`.** Open a PR from a short-lived topic branch (`feature/*`, `bugfix/*`, `hotfix/*`). Let CI run (install → lint → test → build), obtain review, then **Squash merge**. Never push directly to protected branches.
-
-> [!CAUTION]
-> **No secrets** in code, screenshots, or logs. Resolve any security, secret-scanning, or license alerts **before** requesting review.
+<!-- **Target:** `Development` · Short-lived branch (`feature/*`, `bugfix/*`, `hotfix/*`) · Let CI run (install → lint → test → build) · **Squash merge** only -->
 
 # 📝 Summary
-<!-- One or two sentences: what changed and why. -->
-- Purpose:
-- Context / motivation (link ticket/ADR):
+- What changed (2-4 sentences):
+- Why (2 sentences, link ticket/ADR):
 
-## 🔗 Related Issues
-<!-- Use GitHub keywords to auto-close when merged. -->
+---
+
+## 🎯 Type
+- [ ] 🧹 Maintenance
+- [ ] 💥 Breaking change
+- [ ] 🔒 Security
+- [ ] ⚡️ Performance
+- [ ] ✨ Feature
+- [ ] 🐞 Bug fix
+- [ ] ♻️ Refactor
+- [ ] 🧪 Tests only
+- [ ] ⚙️ Build/CI
+- [ ] 📚 Docs
+
+<!-- Optional: delete if none -->
+## 🔗 Linked issues
 - Closes #___
 - Refs #___
 
 ---
 
-## 🎯 Type of change
-<!-- Select all that apply. -->
-- [ ] 🐞 Bug fix (non-breaking)
-- [ ] ✨ New feature (non-breaking)
-- [ ] 💥 Breaking change
-- [ ] ♻️ Refactor (no functional change)
-- [ ] 🧾 Documentation
-- [ ] 🧪 Tests only
-- [ ] ⚙️ Build/CI
-- [ ] 🔒 Security
-- [ ] ⚡️ Performance
-- [ ] 🧹 Task / Maintenance
-
-> _Maintainers:_ apply labels (e.g., `type: Feature`, `status: Ready for review`, `priority: …`).
+## 🧾 What changed (3–6 bullets)
+- …
+- …
+- …
+- …
+- …
+- …
 
 ---
 
-## 🧾 What changed
-<!-- Bullet list of key edits; call out notable files, flags, migrations. -->
-- …
-- …
-- …
+## ✅ Validation / Testing
+- Local: `npm ci && npm run lint && npm test -- --ci && npm run build`
+- Manual Quality Assurance (QA) steps:
 
-## ✅ Validation / Test Plan
-<!-- How did you verify this change? Include steps for reviewers to reproduce. Adapt commands for your stack. -->
-- Local green: `npm ci` → `npm run lint` → `npm test -- --ci` → `npm run build`
-- Manual QA steps:
-  1.
-  2.
-  3.
-- Automated tests:
-  - [ ] Unit
-  - [ ] Integration
-  - [ ] E2E
-- **Platform priority:** Mobile ➜ Desktop
+1.
 
-| Platform   | Versions / Environments                | Result |
-|------------|----------------------------------------|--------|
-| **Desktop**| macOS / Windows / Linux app (version)  | ✅ / ⚠️ |
-| **Mobile** | iOS / Android (device & OS version)    | ✅ / ⚠️ |
+2.
+
+3.
+
+- Automated: [ ] Unit · [ ] Integration · [ ] E2E
+- Platform priority: **Desktop ➜ Mobile**
+| Platform   | Env/Version                         | Result |
+|------------|-------------------------------------|--------|
+| Desktop    | macOS / Windows / Linux (version)   | ✅ / ⚠️ |
+| Mobile     | iOS / Android (device & OS version) | ✅ / ⚠️ |
 
 ---
 
-## 💥 Breaking changes (if any)
-<!-- Describe API/UX changes and migration steps. -->
-- Impact:
+## 💥 Breaking / Risk
+- Breaking impact:
 - Migration steps:
-- Rollback plan:
-
-## 🔒 Security
-<!-- Auth/permission changes, sensitive paths, data handling, SCA/secret-scan results. -->
-- Changes:
-- Risks & mitigations:
-
-## 📈 Performance (if applicable)
-<!-- Provide measurable results if perf-related. -->
-- Baseline → New:
-- Metrics: TTI __ms · LCP __ms · p95 latency __ms · Memory __MB
-- Evidence: links to profiles/traces
-
-## ♿ Accessibility (if UI)
-<!-- Keyboard nav, focus, ARIA, contrast, SR output. -->
-- Considerations & checks:
-
----
-
-## 👀 Screenshots / Recordings (UI changes)
-**Before:**
-
-**After:**
-
----
-
-## 🧭 Risk & Rollback
 - Risk level: Low / Medium / High
-- Rollback: revert PR / disable flag
-- Feature flag (if used): name + default
+- Rollback plan: Revert PR / disable flag
+
+---
+
+## 🔒 Security / 📈 Performance / ♿ Accessibility (if applicable)
+- Security: [ ] None · [ ] Changes, risks & mitigations:
+- Performance: [ ] None · [ ] Baseline → New; metrics/evidence:
+- Accessibility: [ ] None · [ ] Checks/notes (keyboard, focus, ARIA, contrast, SR):
+
+---
+
+## 👀 Evidence (UI or behavior)
+**Before:**  
+**After:**  
+_Include screenshots, recordings, traces, or logs (redact secrets)._
+
+---
+
+## 🧭 Rollout
+- Feature flag: name + default
+- Dependencies: linked PRs/migrations/config toggles
+- Owner/area: team or codeowner
+
+---
 
 ## 📚 Documents & Release Notes
-- Docs updated: [ ] (link)
-- Changelog entry: [ ] (one-liner below)
-- **Release note (one sentence):** …
+- Docs updated: [ ] link
+- Release note (one sentence): …
 
 ---
 
 ## ✅ Author checklist (pre-review)
-- [ ] Scope is single-intent; ≲ ~300 lines & ≤10 files (guideline) or explained.
-- [ ] Local green (install → lint → test → build).
-- [ ] No secrets; scanners addressed; least-privilege configs.
-- [ ] Tests added/updated; QA notes included.
-- [ ] README/usage/docs updated if behavior changed.
-- [ ] Target branch is **Development**; CI checks are green.
-- [ ] **Validated Mobile first, Desktop second** per platform priority.
-- [ ] Ready to **Squash merge**; propose Conventional Commit via **GemCommit**.
+- [ ] Single-intent PR; ideally ≤1,000 lines & ≤20 files (explain if larger)
+- [ ] Local green (install → lint → test → build)
+- [ ] No secrets; scanners clean; license alerts resolved
+- [ ] Tests added/updated; QA notes included
+- [ ] README/usage/docs updated if behavior changed
+- [ ] Target branch is **Development**; CI green
+- [ ] Mobile validated first, then desktop
+- [ ] Ready to **Squash merge**; propose Conventional Commit via **GemCommit**
 
-<!-- Optional: propose the squash commit message -->
+---
+
+## 🔍 Reviewer checklist
+- [ ] Scope is clear; PR size appropriate
+- [ ] Tests cover change paths; CI green
+- [ ] Security/perf/a11y reviewed if relevant
+- [ ] Docs/release note make sense
+- [ ] Title follows Conventional Commit; squashing will produce good history
+
 <details>
-<summary>🧾 Proposed squash commit message (optional)</summary>
+<summary>🧾 Proposed squash commit (optional)</summary>
 
 `<type>(<scope>): <emoji> <summary>`
 
-Body: 2–4 concise sentences on what/why/impact.
+Body: 2–4 short sentences on what/why/impact.
 
 </details>
 
-<!-- Co-author credit (optional). Keep lines exactly formatted for GitHub to recognize. -->
+<!-- Keep lines exactly as-is for GitHub to credit co-authors. -->
 <!--
 Co-authored-by: Name <email@example.com>
 -->
