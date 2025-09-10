@@ -1,0 +1,123 @@
+name: "♿ Accessibility Report"
+description: "⛑️ Report accessibility issues to improve compliance and inclusive User Experience (UX)."
+title: "🆘 Accessibility: <Page/Element> — <Issue>"
+labels:
+  - "area: Design / User Experience (UX)"
+  - "priority: To be determined (TBD)"
+  - "status: Needs triage"
+assignees:
+  - tannergolden
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- Use this to report accessibility barriers. Avoid sharing secrets or personally identifiable information (PII). -->
+
+        ## 📌 What this template is for (and not for)
+
+        **Use this template for:**
+        - Missing alt text or incorrect image descriptions
+        - Low-contrast text, icons, or UI elements
+        - Keyboard navigation problems (tab order, focus traps)
+        - Screen reader compatibility issues
+        - Motion/animation concerns without reduced-motion options
+
+        **Don’t use this template for:**
+        - Product bugs or broken features → use **🐛 Bug Report**
+        - Usability or UX suggestions → use **📝 Feedback Report**
+        - Performance problems → use **🚀 Performance Report**
+        - Documentation gaps → use **📖 Documentation Report**
+        - Requests for new features → use **✨ Feature Request**
+        - Security vulnerabilities → follow **SECURITY.md** (responsible disclosure)
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "✍️ Summary"
+      description: "One or two sentences describing the accessibility issue."
+      placeholder: "Brief description of the accessibility barrier."
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: "🧭 Location"
+      description: "Page/section/component where the issue occurs."
+      placeholder: "/path, component name, or URL fragment (e.g., /settings, SidebarNav)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "🔁 Steps to reproduce"
+      description: "Include exact steps and any required state."
+      placeholder: |
+        1) Go to …
+        2) Focus …
+        3) Press …
+        4) Observe …
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: "🔊 Assistive tech / environment"
+      description: "List the tools and versions used during testing."
+      placeholder: |
+        Screen reader: VoiceOver / NVDA / JAWS / TalkBack (version)
+        Browser & version: Chrome 128 / Safari 17.5 / Firefox 128 / Edge 128
+        OS: macOS 14.5 / Windows 11 / iOS 17.5 / Android 14
+        Input methods: keyboard / switch / touch
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: "❗ Actual result"
+      description: "What happens now."
+      placeholder: "E.g., element not announced, focus lost, insufficient contrast."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: "✅ Expected result"
+      description: "What should happen (reference best practice or guideline)."
+      placeholder: "Describe the expected accessible behavior."
+    validations:
+      required: true
+
+  - type: input
+    id: guideline_reference
+    attributes:
+      label: "📚 Guideline reference (optional)"
+      description: "WCAG criterion if known (e.g., WCAG 2.2.1 Keyboard)."
+      placeholder: "WCAG 2.4.3 Focus Order, WCAG 1.4.3 Contrast (Minimum)"
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "📎 Evidence"
+      description: "Screenshots, recordings, accessibility tree, or screen reader output."
+      placeholder: "Attach files or paste relevant excerpts."
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "🔗 Additional context / links"
+      description: "Related issues, PRs, designs, or audits."
+      placeholder: "Links and extra notes."
+
+  - type: checkboxes
+    id: reporter_checklist
+    attributes:
+      label: "✅ Reporter checklist"
+      options:
+        - label: "I included reproduction steps and environment/assistive tech."
+        - label: "I provided evidence and (if known) a WCAG reference."
+        - label: "I removed or obfuscated secrets and PII."

@@ -1,0 +1,12 @@
+# .github/ISSUE_TEMPLATE/config.yml
+# Purpose: steer users into the right templates and keep vulnerability reports PRIVATE.
+# Note: The "Vulnerability Report" issue template is ONLY for PRIVATE repositories.
+#       For PUBLIC repositories, reporters must use the Security Policy link (private intake).
+
+blank_issues_enabled: false
+
+contact_links:
+  # 🔒 PUBLIC REPOS → Private intake only (no public issues for security).
+  - name: "🔒 Security Report (Private)"
+    url: "https://github.com/<org>/<repo>/security/policy"
+    about: "PUBLIC repositories: report vulnerabilities privately via our security policy. Do NOT open a public issue."
