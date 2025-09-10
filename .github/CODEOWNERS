@@ -1,0 +1,131 @@
+# =============================================================================
+# CODEOWNERS — Folder-based rules (high-signal, low-noise)
+#
+# PRECEDENCE: The LAST matching rule wins.
+# Put broad defaults FIRST, then more specific overrides BELOW.
+#
+# ENFORCEMENT: Settings → Branches → Branch protection →
+#              Require review from Code Owners.
+#
+# The "*" rule matches everything in the repository. Use it as a broad default
+# at the top so that later, more specific rules override it. This ensures
+# all files always have an owner, while giving priority to folder- or
+# file-specific assignments further down.
+#
+# Replace each “# @” with the correct @user or @org/team.
+# =============================================================================
+
+
+# ---------------------------------------------------------------------------
+# 0) GLOBAL DEFAULT
+# Fallback owner for any unmatched files.
+# ---------------------------------------------------------------------------
+* # @
+
+
+# ---------------------------------------------------------------------------
+# 1) REPOSITORY GOVERNANCE & METADATA
+# Community health, contributing guidelines, and repo metadata.
+# ---------------------------------------------------------------------------
+/.github/                            # @
+/.github/ISSUE_TEMPLATE/             # @
+/.github/PULL_REQUEST_TEMPLATE/      # @
+/.github/DISCUSSION_TEMPLATE/        # @
+
+
+# ---------------------------------------------------------------------------
+# 2) CI/CD & AUTOMATION
+# Workflows, automation, and pipeline definitions.
+# ---------------------------------------------------------------------------
+/.github/workflows/                  # @
+/.github/actions/                    # @
+/ci/                                 # @
+/scripts/ci/                         # @
+
+
+# ---------------------------------------------------------------------------
+# 3) APPLICATIONS & SERVICES
+# Core source code for apps, services, or monorepo modules.
+# ---------------------------------------------------------------------------
+/src/                                # @
+/apps/                               # @
+/services/                           # @
+
+
+# ---------------------------------------------------------------------------
+# 4) LIBRARIES & PACKAGES
+# Shared libraries, design systems, or SDKs.
+# ---------------------------------------------------------------------------
+/packages/                           # @
+/libs/                               # @
+
+
+# ---------------------------------------------------------------------------
+# 5) BUILD & OUTPUT
+# Build artifacts, compiled outputs, and public assets.
+# ---------------------------------------------------------------------------
+/build/                              # @
+/dist/                               # @
+/public/                             # @
+/assets/                             # @
+
+
+# ---------------------------------------------------------------------------
+# 6) DATA & SCHEMA
+# Database files, migrations, and data models.
+# ---------------------------------------------------------------------------
+/config/                             # @
+/db/                                 # @
+/migrations/                         # @
+
+
+# ---------------------------------------------------------------------------
+# 7) INFRASTRUCTURE
+# Infra-as-code, deployment configs, and environments.
+# ---------------------------------------------------------------------------
+/infra/                              # @
+/terraform/                          # @
+/helm/                               # @
+/environments/                       # @
+
+
+# ---------------------------------------------------------------------------
+# 8) TESTS & QUALITY
+# Unit, integration, and end-to-end tests.
+# ---------------------------------------------------------------------------
+/tests/                              # @
+/test/                               # @
+/__tests__/                          # @
+/cypress/                            # @
+
+
+# ---------------------------------------------------------------------------
+# 9) DOCUMENTS & CONTENT
+# Documentation, guides, and knowledge resources.
+# ---------------------------------------------------------------------------
+/docs/                               # @
+
+
+# ---------------------------------------------------------------------------
+# 10) DEVELOPER TOOLS & ENVIRONMENT
+# Developer tooling, scripts, and local environment setup.
+# ---------------------------------------------------------------------------
+/scripts/                            # @
+/bin/                                # @
+/.devcontainer/                      # @
+
+
+# ---------------------------------------------------------------------------
+# 11) SECURITY & COMPLIANCE
+# Security policies, compliance, and sensitive configs.
+# ---------------------------------------------------------------------------
+/security/                           # @
+
+
+# ---------------------------------------------------------------------------
+# 12) THIRD-PARTY & VENDOR
+# Vendored code, third-party dependencies, and submodules.
+# ---------------------------------------------------------------------------
+/vendor/                             # @
+/third_party/                        # @
+/submodules/                         # @
