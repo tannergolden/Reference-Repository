@@ -1,0 +1,151 @@
+title: "♿ Accessibility: <Area/Component> — <Issue> (<Assistive tech / Browser / OS>)"
+labels:
+  - "type: Discussion"
+  - "status: Needs triage"
+  - "priority: To be determined (TBD)"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ♿ Accessibility
+        Accessibility feedback—contrast, keyboard navigation, focus order, screen readers.
+        Please include assistive technology, Operating System (OS), and browser details.
+        Be respectful and avoid sharing sensitive information.
+
+  - type: dropdown
+    id: a11y_topic
+    attributes:
+      label: "🧭 Topic type"
+      options:
+        - Contrast / color usage
+        - Keyboard navigation / focus order
+        - Focus management / visible focus
+        - Screen reader / semantics / ARIA
+        - Forms / labels / validation errors
+        - Headings / landmarks / skip links
+        - Dialogs / modals / toasts
+        - Tables / grids
+        - Media / captions / transcripts / audio descriptions
+        - Motion / animations / prefers-reduced-motion
+        - Pointer gestures / drag-and-drop / target size
+        - Zoom / reflow / responsive (200–400%)
+        - High contrast / forced-colors mode
+        - Timing / timeouts
+        - Cognitive load / authentication
+        - RTL / BiDi considerations
+        - Embedded/PDF accessibility
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: "🌎 Environment"
+      options:
+        - label: "environment: Mobile"
+        - label: "environment: Web Browser"
+
+  - type: checkboxes
+    id: assistive_tech
+    attributes:
+      label: "🔊 Assistive technology used"
+      options:
+        - label: VoiceOver (macOS/iOS)
+        - label: NVDA (Windows)
+        - label: JAWS (Windows)
+        - label: TalkBack (Android)
+        - label: Narrator (Windows)
+        - label: Orca (Linux)
+        - label: Other / not listed
+
+  - type: input
+    id: os_browser_versions
+    attributes:
+      label: "💻 OS & browser (with versions)"
+      description: "Include precise versions to help reproduce."
+      placeholder: "macOS 14.5 + Safari 17.5 · Windows 11 + Chrome 128 · Android 14 + Chrome 128"
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "✍️ Summary & context"
+      description: "One or two sentences describing the issue or idea."
+      placeholder: "What’s the problem, who is affected, and where it occurs."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: "🔎 Current behavior"
+      description: "What happens today? Include exact UI elements or announcements."
+      placeholder: "E.g., focus moves to body after modal closes; SR announces button as 'image'."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Expected behavior"
+      description: "Describe the accessible behavior users should experience."
+      placeholder: "E.g., focus returns to the triggering button; SR announces role, name, state."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro_steps
+    attributes:
+      label: "🔁 Steps to reproduce (optional)"
+      description: "Numbered steps to trigger the issue reliably."
+      placeholder: |
+        1) Open …
+        2) Navigate with Tab/Shift+Tab or SR shortcuts …
+        3) Observe …
+
+  - type: input
+    id: wcag_reference
+    attributes:
+      label: "📚 WCAG reference (optional)"
+      description: "List relevant criteria if known (e.g., WCAG 2.2.1 Keyboard, 1.4.3 Contrast)."
+      placeholder: "WCAG 2.4.3 Focus Order; WCAG 1.4.11 Non-text Contrast"
+
+  - type: textarea
+    id: media
+    attributes:
+      label: "🖼️ Evidence"
+      description: "Screenshots, recordings, or snippets (sanitize any sensitive info)."
+      placeholder: "- Screenshot: …\n- Video: …\n- SR output: …"
+
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: "🧩 Affected areas (context)"
+      options:
+        - label: "area: Application Programming Interface (API)"
+        - label: "area: Authentication"
+        - label: "area: Billing"
+        - label: "area: Build"
+        - label: "area: Database"
+        - label: "area: Deployment"
+        - label: "area: Design / User Experience (UX)"
+        - label: "area: Testing"
+        - label: "area: User Interface (UI)"
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "🔗 Links & references"
+      description: "Related issues/PRs, designs, docs, or prior audits."
+      placeholder: "- Issue: #…\n- PR: #…\n- Design spec: …\n- Audit link: …"
+
+  - type: checkboxes
+    id: participation
+    attributes:
+      label: "👥 Participation / call to action"
+      options:
+        - label: Maintainer input requested
+        - label: Design/UX review requested
+        - label: Native SR user review requested
+        - label: Help wanted (reproduction)
+        - label: Help wanted (fix/implementation)

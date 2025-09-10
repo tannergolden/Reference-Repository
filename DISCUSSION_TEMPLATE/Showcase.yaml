@@ -1,0 +1,131 @@
+title: "🎉 Showcase: <Project/Feature> — <Outcome/Highlight> (<YYYY-MM-DD or Ongoing>)"
+labels:
+  - "type: Discussion"
+  - "status: Needs triage"
+  - "priority: To be determined (TBD)"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Showcase
+        Share demos, prototypes, case studies, success stories, and lessons learned.
+        Links, screenshots, and videos encouraged. Be constructive and celebrate wins!
+
+  - type: dropdown
+    id: showcase_type
+    attributes:
+      label: "🧭 Showcase type"
+      options:
+        - Demo
+        - Prototype
+        - Proof of Concept (PoC)
+        - Case study
+        - Success story
+        - Walkthrough / Tutorial
+        - Before / After
+        - Integration
+        - Migration
+        - Redesign / UX improvement
+        - Architecture / Design
+        - Performance win / Benchmark
+        - Reliability / Resilience
+        - Security hardening
+        - Accessibility (A11y) improvement
+        - Internationalization / Localization (i18n/L10n)
+        - Tooling / Developer Experience (DevEx)
+        - Automation / CI/CD
+        - Data / Analytics insight
+        - Dashboard / Visualization
+        - Research / Experiment
+        - Hackathon / Weekend project
+        - Community project / Extension
+        - Release highlight
+    validations:
+      required: true
+
+  - type: input
+    id: links_repo
+    attributes:
+      label: "🔗 Links"
+      description: "Project/repo link(s), live demo, or package registry page."
+      placeholder: "https://github.com/<org>/<repo> · https://example.com/demo"
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "✍️ Summary"
+      description: "One or two sentences describing what you built and why."
+      placeholder: "Concise overview of the showcase."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_it_does
+    attributes:
+      label: "🧩 What it does"
+      description: "Key features or capabilities. Keep it high level."
+      placeholder: "- Feature A…\n- Feature B…\n- Feature C…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_it_matters
+    attributes:
+      label: "🎯 Why it matters"
+      description: "Impact, problems solved, or user/business value."
+      placeholder: "Who benefits and how. Qualitative or quantitative impact."
+    validations:
+      required: true
+
+  - type: textarea
+    id: stack
+    attributes:
+      label: "🧰 Tech stack / approach"
+      description: "Architecture notes, libraries, services, and patterns used."
+      placeholder: "Frontend, backend, data stores, infra, notable patterns."
+
+  - type: textarea
+    id: media
+    attributes:
+      label: "🖼️ Screenshots / videos"
+      description: "Paste links to media or drag-and-drop files after posting."
+      placeholder: "- Screenshot: …\n- Video: …\n- Diagram: …"
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: "📈 Results / metrics (optional)"
+      description: "Benchmarks, adoption, error-rate changes, or time saved."
+      placeholder: "- p95 latency: 420 ms → 210 ms\n- Conversion: +8%\n- Time-on-task: −35%"
+
+  - type: textarea
+    id: lessons
+    attributes:
+      label: "📚 Lessons learned"
+      description: "Gotchas, trade-offs, and what you’d do differently."
+      placeholder: "- What surprised you…\n- Biggest risk…\n- Next time we will…"
+
+  - type: textarea
+    id: whats_next
+    attributes:
+      label: "🧭 What’s next"
+      description: "Roadmap, open questions, and next milestones."
+      placeholder: "- Milestone A…\n- Open question…\n- Help wanted for…"
+
+  - type: checkboxes
+    id: participation
+    attributes:
+      label: "👥 Participation / call to action"
+      options:
+        - label: Feedback welcome
+        - label: Looking for collaborators
+        - label: Maintainer review requested
+        - label: Usability testing volunteers
+        - label: Translators / localization help
+
+  - type: textarea
+    id: credits
+    attributes:
+      label: "🙌 Credits"
+      description: "People, teams, or projects to thank or reference."
+      placeholder: "@handles, partner teams, upstream projects"

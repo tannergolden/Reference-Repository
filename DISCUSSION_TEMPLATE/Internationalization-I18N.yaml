@@ -1,0 +1,152 @@
+title: "🌐 Internationalization: <Locale(s)> — <Area/Component> (<Topic>)"
+labels:
+  - "type: Discussion"
+  - "status: Needs triage"
+  - "priority: To be determined (TBD)"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🌐 Internationalization (I18N)
+        Translation and localization topics, language-specific feedback, and locale issues.
+        Focus on the user problem, who’s affected, and the impact. Links, screenshots,
+        and short repro steps are encouraged.
+
+  - type: dropdown
+    id: i18n_topic
+    attributes:
+      label: "🧭 Topic type"
+      options:
+        - Translation request
+        - Localization issue / bug
+        - Language support request
+        - Script / font rendering
+        - RTL / LTR layout
+        - BiDi (bidirectional) text handling
+        - Pluralization / ICU messages
+        - Date / time / calendar formatting
+        - Numbers / currency / measurement units
+        - Time zones
+        - Locale routing / detection
+        - Language fallback strategy
+        - Input methods / IME / keyboards
+        - Search / sorting / collation
+        - Content strategy / terminology
+        - Glossary / style guide
+        - TMS workflow (Translation Management System)
+        - Machine translation (MT)
+        - QA / linguistic review
+        - Pseudo-localization
+        - International SEO
+        - Accessibility (A11y) for i18n
+        - Compliance / legal notices
+        - Docs / education
+        - Integration / ecosystem
+        - Research / discovery
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: locales
+    attributes:
+      label: "🌍 Language(s) & locale(s)"
+      description: "Use BCP-47 codes when possible."
+      placeholder: "en-US, fr-CA, ar, he, zh-Hant-TW"
+
+  - type: dropdown
+    id: text_direction
+    attributes:
+      label: "↔️ Text direction"
+      options:
+        - LTR
+        - RTL
+        - BiDi mixed
+        - Unknown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: "🌎 Environment (if applicable)"
+      options:
+        - label: "environment: Mobile"
+        - label: "environment: Web Browser"
+
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: "🧩 Affected areas (context)"
+      options:
+        - label: "area: Application Programming Interface (API)"
+        - label: "area: Authentication"
+        - label: "area: Billing"
+        - label: "area: Build"
+        - label: "area: Database"
+        - label: "area: Deployment"
+        - label: "area: Design / User Experience (UX)"
+        - label: "area: Testing"
+        - label: "area: User Interface (UI)"
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "✍️ Summary & context"
+      description: "One or two sentences describing the issue or idea."
+      placeholder: "What’s the problem or opportunity, who is affected, and where?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: "🔎 Current behavior"
+      description: "What happens today? Include any locale-specific problems."
+      placeholder: "Examples of incorrect strings, layout issues, formatting, or routing."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Expected localized behavior"
+      description: "What should users see in the target locale(s)?"
+      placeholder: "Correct strings, layout, formatting, and UX in the specified locales."
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples_strings
+    attributes:
+      label: "🧾 Examples / strings (optional)"
+      description: "Problematic keys/values or snippets (avoid secrets)."
+      placeholder: |
+        key: auth.login.title
+        en: "Sign in"
+        ar: "تسجيل الدخول" (RTL)
+
+  - type: textarea
+    id: media
+    attributes:
+      label: "🖼️ Screenshots / recordings"
+      description: "Show how it looks now and what you expect."
+      placeholder: "- Screenshot: …\n- Video: …"
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "🔗 Links & references"
+      description: "Related issues/PRs, strings files, designs, or docs."
+      placeholder: "- locales/en.json#L…\n- Design spec…\n- Issue #…"
+
+  - type: checkboxes
+    id: call_to_action
+    attributes:
+      label: "👥 Participation / call to action"
+      options:
+        - label: Native speaker review requested
+        - label: Translation help wanted
+        - label: Glossary / style guide update proposed
+        - label: Need UX input for RTL
+        - label: Maintainer decision needed

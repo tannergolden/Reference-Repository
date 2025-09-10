@@ -1,0 +1,172 @@
+title: "🧰 Tooling & Setup: <Topic> — <Tool/Stack> (<OS/CPU/Node>)"
+labels:
+  - "type: Discussion"
+  - "status: Needs triage"
+  - "priority: To be determined (TBD)"
+  - "area: Build"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧰 Tooling & Setup
+        Developer environment topics—IDEs, Node.js versions, package managers, linters,
+        CI runners, containers/devcontainers, and local configuration. Share your
+        goal, current setup, what you tried, and any logs or errors.
+
+  - type: dropdown
+    id: topic_type
+    attributes:
+      label: "🧭 Topic type"
+      options:
+        - IDE configuration
+        - Node.js versioning / managers
+        - Package managers / workspaces
+        - Monorepo tooling
+        - Bundlers / build tools
+        - Transpilers / compilers
+        - Linters / formatters
+        - Test runners / coverage
+        - Git hooks / commit tooling
+        - CI/CD runners / pipelines
+        - Containers / devcontainers
+        - OS-specific setup (WSL/macOS/Linux/Windows)
+        - Secrets / env management
+        - Proxy / certificates / networking
+        - Caching / incremental builds
+        - Remote / cloud dev (Codespaces, etc.)
+        - Performance / build times
+        - Troubleshooting build failures
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tools_involved
+    attributes:
+      label: "🧱 Tools involved (select all that apply)"
+      options:
+        - label: VS Code / Extensions
+        - label: JetBrains (WebStorm/IntelliJ)
+        - label: Vim / Neovim
+        - label: npm / yarn / pnpm / bun
+        - label: nvm / fnm / volta
+        - label: Turborepo / Nx / Rush
+        - label: Vite / Webpack / Rollup / esbuild / Parcel
+        - label: TypeScript / ts-node / SWC / Babel
+        - label: ESLint / Prettier / Stylelint
+        - label: Jest / Vitest / Mocha / Cypress / Playwright
+        - label: Husky / Lefthook / Commitlint / Lint-staged
+        - label: Docker / Docker Compose / Dev Containers
+        - label: GitHub Actions / CircleCI / GitLab CI / Jenkins
+        - label: Make / Just / Taskfile / npm scripts
+        - label: OpenSSL / mkcert / Certificates
+        - label: Other
+
+  - type: input
+    id: node_version
+    attributes:
+      label: "🧩 Node.js version"
+      placeholder: "e.g., 20.11.1 (LTS), 22.x (current)"
+
+  - type: input
+    id: package_manager_versions
+    attributes:
+      label: "📦 Package manager & version"
+      placeholder: "npm 10.8 / yarn 4.3 / pnpm 9.1 / bun 1.1"
+
+  - type: input
+    id: os_cpu_shell
+    attributes:
+      label: "💻 OS / CPU / Shell"
+      placeholder: "macOS 14.5 (arm64) / Ubuntu 22.04 (x64) · zsh/bash/pwsh"
+
+  - type: input
+    id: ci_runner_or_container
+    attributes:
+      label: "⚙️ CI runner / container engine (optional)"
+      placeholder: "GitHub Actions ubuntu-latest · Docker 26.x · Devcontainer"
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: "🎯 Goal"
+      description: "What you want working; the expected outcome."
+      placeholder: "Describe the intended setup or behavior."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_setup
+    attributes:
+      label: "🔧 Current setup"
+      description: "Key config snippets or steps already taken."
+      placeholder: |
+        - Repo structure / workspaces: …
+        - tsconfig/eslint/prettier highlights: …
+        - CI workflow name / key steps: …
+        - Devcontainer/Dockerfile excerpts: …
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "❗ Problem / symptoms"
+      description: "What happens now (errors, timeouts, versions mismatch, etc.)."
+      placeholder: "Describe the observed behavior and where it occurs."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: "🧪 What you tried"
+      description: "Steps, flags, docs, or alternatives you attempted."
+      placeholder: "- Cleared caches…\n- Reinstalled toolchain…\n- Adjusted config…"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "📜 Logs / errors (optional)"
+      description: "Paste relevant excerpts; sanitize secrets and URLs."
+      placeholder: |
+        <error/output here>
+
+  - type: checkboxes
+    id: environment_labels
+    attributes:
+      label: "🌎 Environment labels (optional)"
+      options:
+        - label: "environment: Mobile"
+        - label: "environment: Web Browser"
+
+  - type: checkboxes
+    id: area_labels
+    attributes:
+      label: "🧩 Affected areas (context)"
+      options:
+        - label: "area: Application Programming Interface (API)"
+        - label: "area: Authentication"
+        - label: "area: Billing"
+        - label: "area: Build"
+        - label: "area: Database"
+        - label: "area: Deployment"
+        - label: "area: Design / User Experience (UX)"
+        - label: "area: Testing"
+        - label: "area: User Interface (UI)"
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "🔗 Links & references"
+      description: "Docs, issues, PRs, gists, or example repos."
+      placeholder: "- Doc: …\n- Issue: #…\n- Gist/repo: …"
+
+  - type: checkboxes
+    id: participation
+    attributes:
+      label: "👥 Participation / call to action"
+      options:
+        - label: Maintainer input requested
+        - label: Community tips welcome
+        - label: Looking for example config
+        - label: Help wanted (triage)
+        - label: Help wanted (fix/PR)
